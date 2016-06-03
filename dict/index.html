@@ -4,6 +4,7 @@
   <meta charset=utf-8 />
   <meta name="viewport" content="width=device-width" />
 	<title>chainreaction</title>
+  <link href="akkurat/stylesheet.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" media="screen" href="css/main.css" />
 </head>
 <body>
@@ -15,10 +16,11 @@
   <div id="term_list">
   </div>
   <form id="add_explanation" class="hide">
-    <input type="text" name="id" placeholder="your id" />
+    <p class="prompt">explain “<span class="term"></span>”</p>
+    <input type="text" name="id" placeholder="identify yourself" />
     <input type="text" name="type" placeholder="type of term" />
     <textarea name="explanation" placeholder="explanation"></textarea>
-    <textarea name="question" placeholder="question (optional)"></textarea>
+    <textarea name="question" placeholder="raise a question if you want"></textarea>
     <input type="submit" name="add" value="add explanation" />
     <input type="button" name="cancel" value="cancel" />
   </form>
