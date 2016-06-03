@@ -14,9 +14,11 @@ input[type="text"], textarea {
   display: block;
   border: none;
   border-bottom: 3px solid black;
+  border-radius: 0;
   margin: 1px 0;
   width: 20em;
   background: none;
+  -webkit-appearance: none;
 }
 input:focus, textarea:focus {
   outline: none;
