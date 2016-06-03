@@ -19,7 +19,9 @@ var _fb_add_explanation = function(term_key, id, type, explanation, question) {
 }
 
 // firebase -> ui
+var terms = [];
 _fb_terms.on('child_added', function(snapshot) {
+  terms.push(snapshot.val().name);
   ui_add_term(snapshot.key(), snapshot.val());
   snapshot.ref().child('explanations').on('child_added', function(snapshot) {
     var term_key = snapshot.ref().parent().parent().key();
@@ -35,6 +37,13 @@ _fb_terms.on('child_added', function(snapshot) {
     }
   });
 });
+var $cloud = $('#cloud');
+_fb_terms.on('value', function() {
+  $cloud.empty();
+  for(var term of terms) {
+    $('<li>').html('<a href="#' + term + '">' + term + '</a>').appendTo($cloud);
+  }
+})
 
 // ui
 var $body;
@@ -44,7 +53,7 @@ var $add_explanation_form;
 var ui_add_term = function(key, val) {
   var name = val.name;
   var $term = $('<section>').addClass('term').attr('id', key).prependTo($term_list);
-  $('<h1>').html(name).appendTo($term);
+  $('<h1>').html('<a name="' + name + '">' + name + '</a>').appendTo($term);
   $('<a>').addClass('explain').attr('href', '#').html('<span class="activate">explain this term...</span><span class="activated">explaining...</span>')
     .click(function() {
       var $a = $(this);
