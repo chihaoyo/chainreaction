@@ -1,12 +1,57 @@
+* {
+  box-sizing: border-box;
+}
 html, body, input, button, textarea, select, option {
   font-family: "Akkurat Pro", "PingFang TC", sans-serif;
   font-size: 16px;
   font-weight: normal;
+  line-height: 1.5;
 }
-input, button, select, option {
-  line-height: 1;
+input[type="text"], textarea {
+  display: block;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 1px 0;
+  width: 20em;
+  background: none;
 }
-ul {
-  padding: 0;
-  list-style: none;
+textarea {
+  height: 6em;
+}
+form {
+  margin: 1em 0;
+}
+form#add_explanation {
+  padding: 1em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ccc;
+}
+form#add_explanation.hide {
+  display: none;
+}
+section {
+  margin: 1rem 0;
+}
+h1 {
+  font-size: 1.25rem;
+}
+section > h1 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+a, a:visited {
+  text-decoration: none;
+  color: blue;
+}
+a.explain > .activated {
+  display: none;
+}
+a.explain.active > .activate {
+  display: none;
+}
+a.explain.active > .activated {
+  display: block;
 }
