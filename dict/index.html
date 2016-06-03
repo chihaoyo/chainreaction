@@ -4,9 +4,17 @@
   <meta charset=utf-8 />
   <meta name="viewport" content="width=device-width" />
 	<title>chainreaction</title>
-	<link rel="stylesheet" media="screen" href="" />
+	<link rel="stylesheet" media="screen" href="css/main.css" />
 </head>
 <body>
+  <form id="add_term">
+    <input type="text" name="term" placeholder="term" />
+    <input type="submit" name="add" value="add" />
+  </form>
+  <ul id="term_list">
+  </ul>
 </body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 <script src="js/main.js"></script>
 </html>

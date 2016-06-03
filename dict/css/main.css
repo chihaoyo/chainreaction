@@ -1,0 +1,12 @@
+html, body, input, button, textarea, select, option {
+  font-family: "Akkurat Pro", "PingFang TC", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+input, button, select, option {
+  line-height: 1;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
