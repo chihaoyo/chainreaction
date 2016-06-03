@@ -50,7 +50,7 @@ h1 > a {
   color: inherit;
 }
 #term_list {
-  max-width: 640px;
+  max-width: 720px;
 }
 .term {
   margin: 4rem 0;
@@ -72,7 +72,7 @@ a.explain.active > .activated {
   display: block;
 }
 .explanations > .entry {
-  margin: 1.25rem 0;
+  margin: 1.5rem 0;
 }
 .explanations > .entry > .fields {
   margin: 0;
@@ -81,7 +81,7 @@ a.explain.active > .activated {
 }
 .explanations > .entry > .fields > .field {
   position: relative;
-  margin-left: 6rem;
+  margin: 0.5em 0 0.5em 6rem;
 }
 .explanations > .entry > .fields > .field:before {
   position: absolute;
