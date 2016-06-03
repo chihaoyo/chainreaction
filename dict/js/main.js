@@ -56,18 +56,20 @@ var ui_add_term = function(key, val) {
         $add_explanation_form.removeClass('hide');
       }
       else {
-        $add_explanation_form.addClass('hide');
+        ui_dismiss_form();
       }
       return false;
     }).appendTo($term);
   $('<div>').addClass('explanations').appendTo($term);
 }
 
-var ui_display_form = function() {
-
+var ui_reset_all_input = function($form) {
+  $form.find('input[type="text"], textarea').val('');
 }
 var ui_dismiss_form = function() {
-
+  $('.term > .explain').removeClass('active');
+  $add_explanation_form.addClass('hide');
+  ui_reset_all_input($add_explanation_form);
 }
 
 // ui callback binding
@@ -88,7 +90,7 @@ $(function() {
     if(term && term != '') {
       console.log('add', term);
       _fb_add_term(term);
-      $form.find('input[type="text"], textarea').val('');
+      ui_reset_all_input($form);
     }
     return false;
   });
@@ -102,12 +104,11 @@ $(function() {
     if(target_term_key && id && type && explanation && target_term_key != '' && id != '' && type != '' && explanation != '') {
       console.log('add explanation');
       _fb_add_explanation(target_term_key, id, type, explanation, question);
-      $form.find('input[type="text"], textarea').val('');
-      $('.term#' + target_term_key + ' > .explain').click();
+      ui_dismiss_form();
     }
     return false;
   });
   $('form#add_explanation').find('[name="cancel"]').click(function() {
-    $('.term#' + target_term_key + ' > .explain').click();
+    ui_dismiss_form();
   })
 });
