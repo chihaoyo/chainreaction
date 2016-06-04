@@ -114,7 +114,6 @@ a.explain.active > .activated {
   padding: 0.5rem;
   background: #eee;
   line-height: 1;
-  text-align: justify;
 }
 #cloud:before {
   content: 'TOC';
