@@ -6,7 +6,7 @@ body {
 }
 html, body, input, button, textarea, select, option {
   font-family: "Akkurat", "PingFang TC", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -74,7 +74,7 @@ a.explain.active > .activated {
   display: block;
 }
 .explanations > .entry {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 .explanations > .entry > .fields {
   margin: 0;
@@ -83,26 +83,24 @@ a.explain.active > .activated {
 }
 .explanations > .entry > .fields > .field {
   position: relative;
-  margin: 0.5em 0 0.5em 6rem;
+  margin: 0.5em 0 0.5em 4rem;
 }
 .explanations > .entry > .fields > .field:before {
   position: absolute;
-  left: -6rem;
-  font-size: 0.85rem;
-  line-height: 1.77em;
+  left: -4rem;
   color: #ccc;
 }
 .explanations > .entry > .fields > .field.id:before {
-  content: 'user id';
+  content: '誰寫的';
 }
 .explanations > .entry > .fields > .field.type:before {
-  content: 'type of term';
+  content: '詞性';
 }
 .explanations > .entry > .fields > .field.explanation:before {
-  content: 'explanation';
+  content: '解釋';
 }
 .explanations > .entry > .fields > .field.question:before {
-  content: 'question';
+  content: '問題';
 }
 
 #cloud {

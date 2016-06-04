@@ -84,7 +84,7 @@ var ui_dismiss_form = function() {
 // ui callback binding
 var target_term_key;
 var get_target_term = function() {
-  return $('.term#' + target_term_key + ' > h1').html();
+  return $('.term#' + target_term_key + ' > h1').text();
 }
 $(function() {
   // selecting
